@@ -1,12 +1,20 @@
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./Home";
+import Dashboard from "./dashbaord/Dashboard";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />
+    }
+  ]);
 
-  return (
-    <>
-      <h1 className="text-teal-500 font-medium text-4xl">Welcome To Gorakhpur Book Fair</h1>
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
