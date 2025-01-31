@@ -57,7 +57,7 @@ export default function SidebarNavList() {
   };
 
   return (
-    <div className="w-64 bg-white shadow-lg rounded-lg p-4">
+    <div className="w-64 bg-white  rounded-lg p-4">
       {/* Dashboard Link */}
       <div
         className={`flex items-center justify-between p-3 rounded-lg select-none cursor-pointer transition-all duration-200 ${
