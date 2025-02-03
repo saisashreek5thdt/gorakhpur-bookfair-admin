@@ -352,6 +352,7 @@ export default function SidebarNavList() {
           <span className="ml-2 text-sm font-medium">Social Links</span>
         </div>
       </div>
+
     </div>
   );
 }
