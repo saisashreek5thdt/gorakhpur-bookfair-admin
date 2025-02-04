@@ -22,10 +22,10 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex flex-col sm:flex-row min-h-screen ">
       {/* Sidebar Section */}
       <div
-        className={`h-screen bg-white shadow-lg transition-all duration-300 flex flex-col
+        className={`h-screen bg-white sm:shadow-none md:shadow-lg lg:shadow-lg xl:shadow-lg transition-all duration-300 flex flex-col
           ${isSidebarOpen ? "w-76" : "w-16"}`}
       >
         <SidebarLayout>
@@ -38,7 +38,7 @@ export default function Dashboard() {
       </div>
 
       {/* Main Content Section */}
-      <div className="flex-1 min-w-0 p-4 md:p-8">
+      <div className="flex-1 min-w-0 p-4 md:p-8 sm:mt-0 mt-16 bg-gray-100">
         <h1 className="text-2xl font-bold mb-4 user-select-none cursor-pointer">
           Dashboard
         </h1>

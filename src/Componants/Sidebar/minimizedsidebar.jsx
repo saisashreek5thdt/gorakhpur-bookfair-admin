@@ -15,18 +15,18 @@ import { Tooltip } from "react-tooltip";
 export default function MinimizedSidebar() {
   const icons = [
     { icon: FiGrid, tooltip: "Dashboard" },
-    { icon: FiImage, tooltip: "Images" },
-    { icon: FiInfo, tooltip: "Information" },
-    { icon: FiCalendar, tooltip: "Calendar" },
-    { icon: FiClock, tooltip: "Clock" },
-    { icon: FiMic, tooltip: "Microphone" },
-    { icon: FiUsers, tooltip: "Users" },
-    { icon: FiMapPin, tooltip: "Location" },
-    { icon: FiLink, tooltip: "Links" },
+    { icon: FiImage, tooltip: "Banner" },
+    { icon: FiInfo, tooltip: "About" },
+    { icon: FiCalendar, tooltip: "Event" },
+    { icon: FiClock, tooltip: "Event Schedule" },
+    { icon: FiMic, tooltip: "Speakers" },
+    { icon: FiUsers, tooltip: "Gallery" },
+    { icon: FiMapPin, tooltip: "Venues" },
+    { icon: FiLink, tooltip: "Social Links" },
   ];
 
   return (
-    <div className="overflow-auto">
+    <div className="overflow-auto hidden lg:block md:block xl:block">
       {icons.map((item, index) => (
         <div
           key={index}
