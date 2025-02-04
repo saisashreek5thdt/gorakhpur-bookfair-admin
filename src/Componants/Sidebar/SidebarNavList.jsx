@@ -1,5 +1,17 @@
 import { useState } from "react";
-import { FiMic, FiPlus, FiMinus, FiGrid, FiCalendar, FiInfo, FiImage, FiMapPin, FiUsers, FiLink, FiClock } from "react-icons/fi";
+import {
+  FiMic,
+  FiPlus,
+  FiMinus,
+  FiGrid,
+  FiCalendar,
+  FiInfo,
+  FiImage,
+  FiMapPin,
+  FiUsers,
+  FiLink,
+  FiClock,
+} from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 export default function SidebarNavList() {
@@ -352,12 +364,6 @@ export default function SidebarNavList() {
           <span className="ml-2 text-sm font-medium">Social Links</span>
         </div>
       </div>
-
     </div>
   );
 }
-
-
-
-
-

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import SidebarLayout from "../Layouts/SidebarLayout";
 import SidebarLogo from "../Componants/Sidebar/SidebarLogo";
 import SidebarLogout from "../Componants/Sidebar/SidebarLogout";
@@ -7,7 +6,6 @@ import SidebarNav from "../Componants/Sidebar/SidebarNav";
 import MinimizedSidebar from "../Componants/Sidebar/minimizedsidebar";
 
 export default function Dashboard() {
-  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   useEffect(() => {
@@ -29,9 +27,16 @@ export default function Dashboard() {
           ${isSidebarOpen ? "w-76" : "w-16"}`}
       >
         <SidebarLayout>
-          <SidebarLogo toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+          <SidebarLogo
+            toggleSidebar={toggleSidebar}
+            isSidebarOpen={isSidebarOpen}
+          />
           <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300">
-            {isSidebarOpen ? <SidebarNav isSidebarOpen={isSidebarOpen} /> : <MinimizedSidebar />}
+            {isSidebarOpen ? (
+              <SidebarNav isSidebarOpen={isSidebarOpen} />
+            ) : (
+              <MinimizedSidebar />
+            )}
           </div>
           <SidebarLogout isSidebarOpen={isSidebarOpen} />
         </SidebarLayout>
