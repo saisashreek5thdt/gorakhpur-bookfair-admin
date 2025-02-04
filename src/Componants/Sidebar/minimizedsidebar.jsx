@@ -1,8 +1,6 @@
 import { useState } from "react";
 import {
   FiMic,
-  FiPlus,
-  FiMinus,
   FiGrid,
   FiCalendar,
   FiInfo,
@@ -12,45 +10,35 @@ import {
   FiLink,
   FiClock,
 } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 export default function MinimizedSidebar() {
-  const [isEventDropdownOpen, setIsEventDropdownOpen] = useState(false);
-  const [isSpeakerDropdownOpen, setIsSpeakerDropdownOpen] = useState(false);
-  const [isBannerDropdownOpen, setIsBannerDropdownOpen] = useState(false);
-  const [isSponsorsDropdownOpen, setIsSponsorsDropdownOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const toggleBannerDropdown = (event) => {
-    event.stopPropagation();
-    setIsBannerDropdownOpen(!isBannerDropdownOpen);
-    setIsEventDropdownOpen(false);
-    setIsSpeakerDropdownOpen(false);
-    setIsSponsorsDropdownOpen(false);
-    setActiveSection("banner");
-  };
+  const icons = [
+    { icon: FiGrid, tooltip: "Dashboard" },
+    { icon: FiImage, tooltip: "Images" },
+    { icon: FiInfo, tooltip: "Information" },
+    { icon: FiCalendar, tooltip: "Calendar" },
+    { icon: FiClock, tooltip: "Clock" },
+    { icon: FiMic, tooltip: "Microphone" },
+    { icon: FiUsers, tooltip: "Users" },
+    { icon: FiMapPin, tooltip: "Location" },
+    { icon: FiLink, tooltip: "Links" },
+  ];
 
   return (
-    <>
-      <div className="overflow-auto">
-        {[
-          { icon: FiGrid },
-          { icon: FiImage },
-          { icon: FiInfo },
-          { icon: FiCalendar },
-          { icon: FiClock },
-          { icon: FiMic },
-          { icon: FiUsers },
-          { icon: FiMapPin },
-          { icon: FiLink },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-between p-3 rounded-lg select-none cursor-pointer transition-all duration-200 bg-white hover:bg-gray-100 dark:bg-white-400 dark:hover:bg-gray-400"
-          >
-            <item.icon className="w-6 h-6 md:w-6 md:h-4 lg:w-10 lg:h-10 xl:w-8 xl:h-12 text-black-200 dark:text-black-100 transition-transform duration-200 hover:text-black-100 dark:hover:text-gray-200" />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="overflow-auto">
+      {icons.map((item, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-between p-3 rounded-lg cursor-pointer transition-all duration-200 bg-white hover:bg-gray-100"
+          data-tooltip-id={`tooltip-${index}`}
+        >
+          <item.icon className="w-6 h-6 text-black" />
+          <Tooltip id={`tooltip-${index}`} place="right" effect="solid">
+            {item.tooltip}
+          </Tooltip>
+        </div>
+      ))}
+    </div>
   );
 }
