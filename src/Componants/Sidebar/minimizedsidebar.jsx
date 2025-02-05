@@ -7,7 +7,7 @@ import {
   FiMapPin,
   FiUsers,
   FiLink,
-  FiClock,
+  // FiClock,
 } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 
@@ -17,7 +17,7 @@ export default function MinimizedSidebar() {
     { icon: FiImage, tooltip: "Banner" },
     { icon: FiInfo, tooltip: "About" },
     { icon: FiCalendar, tooltip: "Event" },
-    { icon: FiClock, tooltip: "Event Schedule" },
+    // { icon: FiClock, tooltip: "Event Schedule" },
     { icon: FiMic, tooltip: "Speakers" },
     { icon: FiUsers, tooltip: "Gallery" },
     { icon: FiMapPin, tooltip: "Venues" },
