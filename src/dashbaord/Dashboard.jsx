@@ -1,4 +1,3 @@
-//cloude code
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import SidebarLayout from "../Layouts/SidebarLayout";
@@ -65,8 +64,6 @@ export default function Dashboard() {
     </div>
   );
 }
-
-
 
 
 
