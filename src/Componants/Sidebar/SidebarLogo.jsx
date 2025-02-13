@@ -1,7 +1,7 @@
 export default function SidebarLogo({ toggleSidebar, isSidebarOpen }) {
   return (
     <div
-      className={`p-4 border-b border-gray-200 flex justify-center items-center relative group cursor-pointer select-none transition-all duration-300
+      className={`p-[8px] border-b shadow-sm border-gray-200 flex justify-center items-center relative group cursor-pointer select-none transition-all duration-300
       ${isSidebarOpen ? "justify-start pl-4" : "justify-center"}`}
       onClick={toggleSidebar}
       title="Menubar"

@@ -16,6 +16,9 @@
   .user-select-none {
     user-select: none;
   }
+
+
+  /* calender */
   .calendar-container .react-datepicker {
     width: 100%;
     border: none;
@@ -47,6 +50,35 @@
       width: 1.5rem;
       margin: 0.1rem;
     }
+  }
+
+
+
+
+
+
+  /* scrollbar  */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color:#4B5563;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
   }
 
 
